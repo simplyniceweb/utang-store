@@ -1,0 +1,40 @@
+{% extends 'base.twig' %}
+
+{% block styles %}
+    <link rel="stylesheet" type="text/css" href="{{ asset('assets/stylesheets/debt.css')~v }}">
+{% endblock %}
+
+{% block content %}
+<div class="container-fluid mt-4">
+    <div id="exampleModal" class="row">
+        <div class="col-md-12  my-3">
+            <h4>Add item <button class="btn-sm btn btn-success float-right add-item" type="button"><i class="fas fa-plus fa-lg text-white"></i></button></h4>
+        </div>
+        <div class="col-md-12 static-item">
+            <div class="input-group mt-2 item-list clone">
+                <span class="remove-item"><i class="far fa-times-circle fa-lg"></i></span>
+
+                <select class="form-control select-item" name="item[]"></select>
+                <span class="input-group-btn" style="width:0px;"></span>
+                <input type="number" class="form-control amount" placeholder="Amount" name="amount[]" value="0">
+                <span class="input-group-btn" style="width:0px;"></span>
+                <input type="number" class="form-control price" placeholder="Price" name="price[]" value="0">
+            </div>
+
+            <div class="input-group mt-2 item-list" id="cccjferrer">
+                <span class="remove-item"><i class="far fa-times-circle fa-lg"></i></span>
+                
+                <select class="form-control select-item" name="item[]"></select>
+                <span class="input-group-btn" style="width:0px;"></span>
+                <input type="number" class="form-control amount" placeholder="Amount" name="amount[]" value="0">
+                <span class="input-group-btn" style="width:0px;"></span>
+                <input type="number" class="form-control price" placeholder="Price" name="price[]" value="0">
+            </div>
+        </div>
+    </div>
+</div>
+{% endblock %}
+
+{% block scripts %}
+    <script type="text/javascript" src="{{ asset('assets/scripts/global.js')~v }}"></script>
+{% endblock %}

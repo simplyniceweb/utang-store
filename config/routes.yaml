@@ -1,0 +1,34 @@
+inventory-list:
+   path: /inventory-list
+   controller: App\Controller\InventoryController::ajax
+inventory:
+   path: /inventory/{id}
+   defaults: { id: null }
+   controller: App\Controller\InventoryController::index
+user-list:
+   path: /user-list
+   controller: App\Controller\UserController::ajax
+add-user:
+   path: /add-user
+   controller: App\Controller\UserController::addUser
+add-debt:
+   path: /add-debt
+   controller: App\Controller\DebtController::addDebt
+edit-debt:
+   path: /edit-debt/{id}
+   controller: App\Controller\DebtController::editDebt
+delete-debt:
+   path: /delete-debt/{id}/{user_id}
+   controller: App\Controller\DebtController::deleteDebt
+pay-debt:
+   path: /pay-debt/{id}/{user_id}
+   controller: App\Controller\DebtController::payDebt
+overview-debt:
+   path: /overview-debt/{id}
+   controller: App\Controller\DebtController::overviewDebt
+search:
+   path: /search
+   controller: App\Controller\DefaultController::search
+index:
+   path: /
+   controller: App\Controller\DefaultController::index

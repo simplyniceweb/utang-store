@@ -1,0 +1,65 @@
+body, html {
+	font-size: 14px;
+	font-family: 'Roboto Condensed', sans-serif;
+}
+header {
+	padding: 15px;
+	color: #ffffff;
+	background-color: #eba4eb
+}
+header img {
+    width: 40px;
+
+	top: -5px;
+	position: relative;
+}
+
+
+.hr-dashed {
+	border-bottom: 1px dashed #cccccc
+}
+.select2-dropdown {
+	z-index: 99999
+}
+#exampleModal input[type=text]:not(:last-child) {
+	border-right: 0;
+}
+#exampleModal .input-group.clone {
+	display: none;
+}
+#exampleModal .input-group .remove-item {
+    position: absolute;
+    right: 0;
+    top: -10px;
+    z-index: 999;
+
+    color: #f13434;
+    background-color: #ffffff;
+}
+
+#exampleModal .input-group span.select2-container {
+    z-index:10050;
+}
+#exampleModal .input-group .select2-container {
+	width: 120px !important;
+}
+#exampleModal .input-group .select2-container .select2-selection--single {
+	height: 33px;
+}
+#exampleModal .input-group .select2-container--default .select2-selection--single {
+	border-radius: 0;
+    border: 1px solid #cccccc;
+    border-right: 0;
+}
+#exampleModal .input-group .select2-container--default .select2-selection--single .select2-selection__rendered {
+	line-height: 32px;
+}
+#exampleModal .input-group .select2-container--default .select2-selection--single .select2-selection__placeholder {
+	color: #333333 !important;
+}
+#exampleModal .input-group .modal-body .select2-container:focus,
+#exampleModal .input-group .select2-container--default .select2-selection--single:focus,
+#exampleModal .input-group .select2-container--default .select2-search--dropdown .select2-search__field:focus,
+#exampleModal .input-group .select2-container--default .select2-selection--single .select2-selection__rendered:focus {
+	outline: none;
+}

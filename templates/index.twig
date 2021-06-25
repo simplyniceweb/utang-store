@@ -1,0 +1,77 @@
+{% extends 'base.twig' %}
+
+{% block styles %}
+    <link rel="stylesheet" type="text/css" href="{{ asset('assets/stylesheets/homepage.css') }}">
+{% endblock %}
+
+{% block content %}
+
+    <section class="search container-fluid">
+
+        <div class="row information mt-3">
+            <div class="col-md-12 text-center">
+                <img src="{{ asset('assets/images/collect.png') }}" class="img-fluid">
+            </div>
+            <div class="col">
+                <h4>To collect <span class="money float-right">&#8369; 1,354.00</span></h4>
+            </div>
+        </div>
+        
+        <form method="GET" action="{{ path('search') }}">
+            <div class="row mt-3">
+                <div class="col-md-12">
+                    <label>Search for:</label>
+                    <select class="form-control" name="type">
+                        <option value="inventory">Inventory</option>
+                        <option value="credit">Credit</option>
+                    </select>
+                </div>
+            </div>
+            
+            <div class="row mt-3">
+                <div class="col-md-12">
+                    <div class="input-group mb-3">
+                        <input type="text" class="form-control" name="keyword" placeholder="Keyword">
+                        <div class="input-group-append">
+                            <button class="input-group-text"><i class="fas fa-search fa-lg"></i></button>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </form>
+
+        <div class="row mt-3 show-all-buttons">
+            <div class="col-md-12">
+                <div class="btn-group" role="group" aria-label="Basic example">
+                    <button type="button" data-toggle="modal" data-target="#addUserModal" class="btn btn-info">User <i class="fas fa-users ml-3"></i></button>
+                    <button type="button" data-toggle="modal" data-target="#exampleModal" class="btn btn-danger">Credit <i class="fas fa-coins ml-3"></i></button>
+                    <a href="{{ path('search', {type: 'credit'}) }}" class="btn btn-success">All Credits <i class="fas fa-hand-holding-usd ml-3"></i></a>
+                </div>
+            </div>
+            <div class="col-md-12 mt-3">
+                <a href="{{ path('inventory') }}" class="btn btn-warning btn-block inventory-btn">Manage inventory <i class="fas fa-boxes float-right"></i></a>
+            </div>
+        </div>
+    </section>
+
+    <section class="mt-3 container-fluid recent">
+        <div class="row">
+            <div class="col">
+                {% for i in recents %}
+                <div class="info-box" data-id="{{ path('overview-debt', {id: i.user.id}) }}">
+                    <p>{{ i.user is not empty ? i.user.getFirstname ~' '~ i.user.getLastname  }} <i class="far fa-user-circle float-right ml-2"></i></p>
+                    <p><span class="date">{{ i.getCreatedAt|date('F j, Y g:i a') }}</span> <span class="money float-right">&#8369; {{ i.getTotal|number_format(2, '.', ',') }}</span></p>
+                </div>
+                {% endfor %}
+            </div>
+        </div>
+    </section>
+
+    {% include "credit/add.credit.twig" %}
+    {% include "user/add.user.twig" %}
+
+{% endblock %}
+
+{% block scripts %}
+    <script type="text/javascript" src="/assets/scripts/global.js"></script>
+{% endblock %}

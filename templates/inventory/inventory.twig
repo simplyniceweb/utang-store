@@ -1,0 +1,40 @@
+{% extends 'base.twig' %}
+
+{% block styles %}
+    <link rel="stylesheet" type="text/css" href="{{ asset('assets/stylesheets/inventory.css') }}">
+{% endblock %}
+
+{% block content %}
+    <section class="container-fluid">
+        <div class="row">
+            <div class="col-md-12 mt-5">
+                <h4>Inventory <a href="{{ path('inventory') }}"><i class="fas fa-boxes float-right fa-lg"></i></a></h4>
+                <hr>
+                <span class="add-item" data-toggle="modal" data-target="#inventoryModal"><i class="fas fa-plus fa-lg"></i></span>
+            </div>
+
+            <div class="col-md-12 recent-list">
+                {% if list is empty %}
+                    {{ form_start(form) }}
+                    {{ form_widget(form) }}
+                        <button type="submit" class="btn btn-primary">Save changes</button>
+                    {{ form_end(form) }}
+                {% endif %}
+
+                {% for l in list %}
+                <p class="text-uppercase list">{{ l.name }} <span class="float-right">&#8369; {{ l.getWholesalePrice }} / <span class="text-danger">&#8369; {{ l.getStorePrice }}</span> <a href="{{ path('inventory', {id: l.id}) }}"><i class="ml-2 fas fa-pencil-alt"></i></a></span></p>
+                {% endfor %}
+            </div>
+        </div>
+    </section>
+
+    {% include "inventory/add.inventory.twig" %}
+{% endblock %}
+
+{% block scripts %}
+    <script>
+        $(document).ready(function(){
+            var f = {};
+        });
+    </script>
+{% endblock %}

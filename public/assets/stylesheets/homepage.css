@@ -1,0 +1,112 @@
+section.search {
+	padding-top: 15px;
+	padding-bottom: 15px;
+}
+section.search input {
+	padding: 20px;
+	color: #619def;
+	font-size: 16px;
+	border-radius: 0;
+	border: 1px solid #619def;
+}
+section.search select {
+	color: #619def;
+	font-size: 16px;
+	border-radius: 0;
+	border: 1px solid #619def;
+}
+section.search select > option {
+	color: #619def;
+}
+section.search select:focus {
+	color: #619def;
+	box-shadow: none;
+	outline: none;
+}
+section.search input::placeholder {
+	color: #72a9f3
+}
+section.search .input-group-text {
+    padding-left: 15px;
+    padding-right: 15px;
+
+	color: #ffffff;
+
+	border-radius: 0;
+	background-color: #5592e5;
+	border-color: #5592e5;
+}
+section.search .input-group-text:focus {
+	box-shadow: none;
+	outline: none;
+}
+input[type=text]:focus {
+	color: #619def;
+
+	outline: none;
+	box-shadow: none;
+}
+section.search .inventory-btn,
+section.search .inventory-btn:active,
+section.search .inventory-btn:focus {
+	text-transform: uppercase;
+	color: #ffffff !important
+}
+
+section.search .information {
+	padding-bottom: 20px;
+	border-bottom: 1px dashed #cccccc;
+}
+section.search .information .money {
+	font-size: 16px;
+}
+section.search .information img {
+    width: 70px;
+    margin-bottom: 30px;
+
+    animation-duration: 1.5s;
+    animation-iteration-count: infinite;
+
+    animation-name: bounce-img;
+    animation-timing-function: ease-in-out;
+}
+@keyframes bounce-img {
+    0%, 100%  { transform: scale(.9,1.1)   translateY(-20px); }
+    20%  { transform: scale(1.05,.95) translateY(0); }
+    27%  { transform: scale(1,1)      translateY(-7px); }
+    34%  { transform: scale(1,1)      translateY(0); }
+    80%  { transform: scale(1,1)   translateY(0); }
+}
+
+section.search .information h4 {
+	padding-bottom: 3px;
+}
+
+section.search .show-all-buttons {
+	padding-bottom: 20px;
+	border-bottom: 1px dashed #cccccc;
+}
+section.search .show-all-buttons button {
+	color: #ffffff;
+	font-size: 14px;
+	text-transform: uppercase;
+}
+
+
+section.recent p {
+	margin-bottom: 0
+}
+section.recent .date {
+	font-size: 12px;
+	color: #565656
+}
+section.recent .info-box {
+	padding-top: 10px;
+	padding-bottom: 10px;
+	border-bottom: 1px dashed #cccccc;
+}
+section.recent .info-box:hover,
+section.recent .info-box:focus,
+section.recent .info-box:active {
+	background-color: #f1f1f1
+}
