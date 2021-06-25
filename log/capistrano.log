@@ -1,0 +1,20 @@
+# Logfile created on 2021-06-26 03:36:38 +0800 by logger.rb/66358
+  INFO ---------------------------------------------------------------------------
+  INFO START 2021-06-26 03:36:38 +0800 cap production deploy
+  INFO ---------------------------------------------------------------------------
+  INFO [9e1b1c22] Running /usr/bin/env mkdir -p /tmp as cccjferrer@da05.qabana.nl
+ DEBUG [9e1b1c22] Command: /usr/bin/env mkdir -p /tmp
+  INFO [9e1b1c22] Finished in 3.969 seconds with exit status 0 (successful).
+ DEBUG Uploading /tmp/git-ssh-utang-store-production-simpl.sh 0.0%
+  INFO Uploading /tmp/git-ssh-utang-store-production-simpl.sh 100.0%
+  INFO [eef82480] Running /usr/bin/env chmod 700 /tmp/git-ssh-utang-store-production-simpl.sh as cccjferrer@da05.qabana.nl
+ DEBUG [eef82480] Command: /usr/bin/env chmod 700 /tmp/git-ssh-utang-store-production-simpl.sh
+  INFO [eef82480] Finished in 0.882 seconds with exit status 0 (successful).
+  INFO [6a70535a] Running /usr/bin/env git ls-remote git@github.com:simplyniceweb/utang-store.git HEAD as cccjferrer@da05.qabana.nl
+ DEBUG [6a70535a] Command: ( export GIT_ASKPASS="/bin/echo" GIT_SSH="/tmp/git-ssh-utang-store-production-simpl.sh" ; /usr/bin/env git ls-remote git@github.com:simplyniceweb/utang-store.git HEAD )
+ DEBUG [6a70535a] 	Warning: Permanently added 'github.com,140.82.121.4' (RSA) to the list of known hosts.
+ DEBUG [6a70535a] 	git@github.com: Permission denied (publickey).
+ DEBUG [6a70535a] 	fatal: Could not read from remote repository.
+
+Please make sure you have the correct access rights
+and the repository exists.

@@ -29,19 +29,19 @@
                     
                     <div class="row d-flex py-3 {{ debt.getViewStatus == 3 ? 'parent-paid' : null }}">
                         {% if debt.cash is not empty %}
-                        <div class="col-12 mt-3 bg-note">
-                            {% set total = debt.cash-debt.getPaidAmount %}
-                            <p class="m-0 p-0">Paid: &#8369; {{ debt.getPaidAmount|default('0.00') }} 
-                                {% if debt.getPaidAmount %}
-                                    <span class="float-right">Paid at: {{ debt.getPaidAt|date('F j, Y g:i a') }}</span>
-                                {% endif %}
-                            </p>
+                            <div class="col-12 mt-3 bg-note">
+                                {% set total = debt.cash-debt.getPaidAmount %}
+                                <p class="m-0 p-0">Paid: &#8369; {{ debt.getPaidAmount|default('0.00') }} 
+                                    {% if debt.getPaidAmount %}
+                                        <span class="float-right">Paid at: {{ debt.getPaidAt|date('F j, Y g:i a') }}</span>
+                                    {% endif %}
+                                </p>
 
-                            <p class="m-0 p-0">Total: &#8369; {{ (debt.cash)|number_format(2, '.', ',') }}</p>
-                            <p>Balance: &#8369; {{ total|number_format(2, '.', ',') }}</p>
-                            <p class="mb-0 font-weight-bold">Note:</p>
-                            <p>{{ debt.description|raw }}</p>
-                        </div>
+                                <p class="m-0 p-0">Total: &#8369; {{ (debt.cash)|number_format(2, '.', ',') }}</p>
+                                <p>Balance: &#8369; {{ total|number_format(2, '.', ',') }}</p>
+                                <p class="mb-0 font-weight-bold">Note:</p>
+                                <p>{{ debt.description|raw }}</p>
+                            </div>
                         {% else %}
                             {% set total = 0 %}
 
