@@ -34,7 +34,7 @@ class DefaultController extends AbstractController
     {
         $admin = $request->get('admin');
         if (!isset($admin)) {
-            return false;
+            // return false;
         }
 
         $return = [];
