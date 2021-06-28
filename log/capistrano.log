@@ -885,3 +885,256 @@ Script cache:clear returned with error code 1
 !!  
 !!  
 Script @auto-scripts was called via post-install-cmd
+  INFO ---------------------------------------------------------------------------
+  INFO START 2021-06-28 16:53:51 +0800 cap production deploy
+  INFO ---------------------------------------------------------------------------
+  INFO [3badbefe] Running /usr/bin/env mkdir -p /tmp as cccjferrer@da05.qabana.nl
+ DEBUG [3badbefe] Command: /usr/bin/env mkdir -p /tmp
+  INFO [3badbefe] Finished in 3.438 seconds with exit status 0 (successful).
+ DEBUG Uploading /tmp/git-ssh-utang-store-production-simpl.sh 0.0%
+  INFO Uploading /tmp/git-ssh-utang-store-production-simpl.sh 100.0%
+  INFO [447b4271] Running /usr/bin/env chmod 700 /tmp/git-ssh-utang-store-production-simpl.sh as cccjferrer@da05.qabana.nl
+ DEBUG [447b4271] Command: /usr/bin/env chmod 700 /tmp/git-ssh-utang-store-production-simpl.sh
+  INFO [447b4271] Finished in 0.871 seconds with exit status 0 (successful).
+  INFO [aea76686] Running /usr/bin/env git ls-remote https://github.com/simplyniceweb/utang-store.git HEAD as cccjferrer@da05.qabana.nl
+ DEBUG [aea76686] Command: ( export GIT_ASKPASS="/bin/echo" GIT_SSH="/tmp/git-ssh-utang-store-production-simpl.sh" ; /usr/bin/env git ls-remote https://github.com/simplyniceweb/utang-store.git HEAD )
+ DEBUG [aea76686] 	ac1c621c6b2d4803bd6f2862f1fd615ac9ef396c	HEAD
+  INFO [aea76686] Finished in 0.790 seconds with exit status 0 (successful).
+  INFO [43efc851] Running /usr/bin/env mkdir -p ~/domains/cccjferrer.com/shared ~/domains/cccjferrer.com/releases as cccjferrer@da05.qabana.nl
+ DEBUG [43efc851] Command: /usr/bin/env mkdir -p ~/domains/cccjferrer.com/shared ~/domains/cccjferrer.com/releases
+  INFO [43efc851] Finished in 0.891 seconds with exit status 0 (successful).
+  INFO [6c4704c7] Running /usr/bin/env mkdir -p ~/domains/cccjferrer.com/shared/public/upload as cccjferrer@da05.qabana.nl
+ DEBUG [6c4704c7] Command: /usr/bin/env mkdir -p ~/domains/cccjferrer.com/shared/public/upload
+  INFO [6c4704c7] Finished in 0.868 seconds with exit status 0 (successful).
+  INFO [5e799b4a] Running /usr/bin/env mkdir -p ~/domains/cccjferrer.com/shared as cccjferrer@da05.qabana.nl
+ DEBUG [5e799b4a] Command: /usr/bin/env mkdir -p ~/domains/cccjferrer.com/shared
+  INFO [5e799b4a] Finished in 0.940 seconds with exit status 0 (successful).
+ DEBUG [e0d9415c] Running [ -f ~/domains/cccjferrer.com/shared/.env ] as cccjferrer@da05.qabana.nl
+ DEBUG [e0d9415c] Command: [ -f ~/domains/cccjferrer.com/shared/.env ]
+ DEBUG [e0d9415c] Finished in 0.873 seconds with exit status 0 (successful).
+ DEBUG [0741ea0f] Running [ -f ~/domains/cccjferrer.com/current/REVISION ] as cccjferrer@da05.qabana.nl
+ DEBUG [0741ea0f] Command: [ -f ~/domains/cccjferrer.com/current/REVISION ]
+ DEBUG [0741ea0f] Finished in 0.881 seconds with exit status 1 (failed).
+ DEBUG [45a71f5c] Running [ -f ~/domains/cccjferrer.com/repo/HEAD ] as cccjferrer@da05.qabana.nl
+ DEBUG [45a71f5c] Command: [ -f ~/domains/cccjferrer.com/repo/HEAD ]
+ DEBUG [45a71f5c] Finished in 0.882 seconds with exit status 0 (successful).
+  INFO The repository mirror is at ~/domains/cccjferrer.com/repo
+ DEBUG [c21a3a9a] Running if test ! -d ~/domains/cccjferrer.com/repo; then echo "Directory does not exist '~/domains/cccjferrer.com/repo'" 1>&2; false; fi as cccjferrer@da05.qabana.nl
+ DEBUG [c21a3a9a] Command: if test ! -d ~/domains/cccjferrer.com/repo; then echo "Directory does not exist '~/domains/cccjferrer.com/repo'" 1>&2; false; fi
+ DEBUG [c21a3a9a] Finished in 0.869 seconds with exit status 0 (successful).
+  INFO [3f1a5485] Running /usr/bin/env git remote set-url origin https://github.com/simplyniceweb/utang-store.git as cccjferrer@da05.qabana.nl
+ DEBUG [3f1a5485] Command: cd ~/domains/cccjferrer.com/repo && ( export GIT_ASKPASS="/bin/echo" GIT_SSH="/tmp/git-ssh-utang-store-production-simpl.sh" ; /usr/bin/env git remote set-url origin https://github.com/simplyniceweb/utang-store.git )
+  INFO [3f1a5485] Finished in 0.899 seconds with exit status 0 (successful).
+  INFO [f5710759] Running /usr/bin/env git remote update --prune as cccjferrer@da05.qabana.nl
+ DEBUG [f5710759] Command: cd ~/domains/cccjferrer.com/repo && ( export GIT_ASKPASS="/bin/echo" GIT_SSH="/tmp/git-ssh-utang-store-production-simpl.sh" ; /usr/bin/env git remote update --prune )
+ DEBUG [f5710759] 	Fetching origin
+ DEBUG [f5710759] 	From https://github.com/simplyniceweb/utang-store
+   2ac85db..ac1c621  master     -> master
+  INFO [f5710759] Finished in 1.277 seconds with exit status 0 (successful).
+ DEBUG [7e986f87] Running if test ! -d ~/domains/cccjferrer.com/repo; then echo "Directory does not exist '~/domains/cccjferrer.com/repo'" 1>&2; false; fi as cccjferrer@da05.qabana.nl
+ DEBUG [7e986f87] Command: if test ! -d ~/domains/cccjferrer.com/repo; then echo "Directory does not exist '~/domains/cccjferrer.com/repo'" 1>&2; false; fi
+ DEBUG [7e986f87] Finished in 0.881 seconds with exit status 0 (successful).
+  INFO [93c9d90e] Running /usr/bin/env mkdir -p ~/domains/cccjferrer.com/releases/20210628085403 as cccjferrer@da05.qabana.nl
+ DEBUG [93c9d90e] Command: cd ~/domains/cccjferrer.com/repo && ( export GIT_ASKPASS="/bin/echo" GIT_SSH="/tmp/git-ssh-utang-store-production-simpl.sh" ; /usr/bin/env mkdir -p ~/domains/cccjferrer.com/releases/20210628085403 )
+  INFO [93c9d90e] Finished in 0.877 seconds with exit status 0 (successful).
+  INFO [29f4dc28] Running /usr/bin/env git archive master | /usr/bin/env tar -x -f - -C ~/domains/cccjferrer.com/releases/20210628085403 as cccjferrer@da05.qabana.nl
+ DEBUG [29f4dc28] Command: cd ~/domains/cccjferrer.com/repo && ( export GIT_ASKPASS="/bin/echo" GIT_SSH="/tmp/git-ssh-utang-store-production-simpl.sh" ; /usr/bin/env git archive master | /usr/bin/env tar -x -f - -C ~/domains/cccjferrer.com/releases/20210628085403 )
+  INFO [29f4dc28] Finished in 1.034 seconds with exit status 0 (successful).
+ DEBUG [15f3ba95] Running if test ! -d ~/domains/cccjferrer.com/repo; then echo "Directory does not exist '~/domains/cccjferrer.com/repo'" 1>&2; false; fi as cccjferrer@da05.qabana.nl
+ DEBUG [15f3ba95] Command: if test ! -d ~/domains/cccjferrer.com/repo; then echo "Directory does not exist '~/domains/cccjferrer.com/repo'" 1>&2; false; fi
+ DEBUG [15f3ba95] Finished in 0.881 seconds with exit status 0 (successful).
+ DEBUG [08567be6] Running /usr/bin/env git rev-list --max-count=1 master as cccjferrer@da05.qabana.nl
+ DEBUG [08567be6] Command: cd ~/domains/cccjferrer.com/repo && ( export GIT_ASKPASS="/bin/echo" GIT_SSH="/tmp/git-ssh-utang-store-production-simpl.sh" ; /usr/bin/env git rev-list --max-count=1 master )
+ DEBUG [08567be6] 	ac1c621c6b2d4803bd6f2862f1fd615ac9ef396c
+ DEBUG [08567be6] Finished in 0.881 seconds with exit status 0 (successful).
+ DEBUG [372e5324] Running if test ! -d ~/domains/cccjferrer.com/releases/20210628085403; then echo "Directory does not exist '~/domains/cccjferrer.com/releases/20210628085403'" 1>&2; false; fi as cccjferrer@da05.qabana.nl
+ DEBUG [372e5324] Command: if test ! -d ~/domains/cccjferrer.com/releases/20210628085403; then echo "Directory does not exist '~/domains/cccjferrer.com/releases/20210628085403'" 1>&2; false; fi
+ DEBUG [372e5324] Finished in 1.181 seconds with exit status 0 (successful).
+  INFO [2d5f998d] Running /usr/bin/env echo "ac1c621c6b2d4803bd6f2862f1fd615ac9ef396c" > REVISION as cccjferrer@da05.qabana.nl
+ DEBUG [2d5f998d] Command: cd ~/domains/cccjferrer.com/releases/20210628085403 && /usr/bin/env echo "ac1c621c6b2d4803bd6f2862f1fd615ac9ef396c" > REVISION
+  INFO [2d5f998d] Finished in 0.867 seconds with exit status 0 (successful).
+  INFO [7b5b2e00] Running /usr/bin/env mkdir -p ~/domains/cccjferrer.com/releases/20210628085403 as cccjferrer@da05.qabana.nl
+ DEBUG [7b5b2e00] Command: /usr/bin/env mkdir -p ~/domains/cccjferrer.com/releases/20210628085403
+  INFO [7b5b2e00] Finished in 0.868 seconds with exit status 0 (successful).
+ DEBUG [a5830dcb] Running [ -L ~/domains/cccjferrer.com/releases/20210628085403/.env ] as cccjferrer@da05.qabana.nl
+ DEBUG [a5830dcb] Command: [ -L ~/domains/cccjferrer.com/releases/20210628085403/.env ]
+ DEBUG [a5830dcb] Finished in 0.878 seconds with exit status 1 (failed).
+ DEBUG [f6df0d07] Running [ -f ~/domains/cccjferrer.com/releases/20210628085403/.env ] as cccjferrer@da05.qabana.nl
+ DEBUG [f6df0d07] Command: [ -f ~/domains/cccjferrer.com/releases/20210628085403/.env ]
+ DEBUG [f6df0d07] Finished in 0.873 seconds with exit status 0 (successful).
+  INFO [670d49af] Running /usr/bin/env rm ~/domains/cccjferrer.com/releases/20210628085403/.env as cccjferrer@da05.qabana.nl
+ DEBUG [670d49af] Command: /usr/bin/env rm ~/domains/cccjferrer.com/releases/20210628085403/.env
+  INFO [670d49af] Finished in 0.872 seconds with exit status 0 (successful).
+  INFO [8c41017c] Running /usr/bin/env ln -s ~/domains/cccjferrer.com/shared/.env ~/domains/cccjferrer.com/releases/20210628085403/.env as cccjferrer@da05.qabana.nl
+ DEBUG [8c41017c] Command: /usr/bin/env ln -s ~/domains/cccjferrer.com/shared/.env ~/domains/cccjferrer.com/releases/20210628085403/.env
+  INFO [8c41017c] Finished in 1.110 seconds with exit status 0 (successful).
+  INFO [05c17e8d] Running /usr/bin/env mkdir -p ~/domains/cccjferrer.com/releases/20210628085403/public as cccjferrer@da05.qabana.nl
+ DEBUG [05c17e8d] Command: /usr/bin/env mkdir -p ~/domains/cccjferrer.com/releases/20210628085403/public
+  INFO [05c17e8d] Finished in 0.876 seconds with exit status 0 (successful).
+ DEBUG [f56bee28] Running [ -L ~/domains/cccjferrer.com/releases/20210628085403/public/upload ] as cccjferrer@da05.qabana.nl
+ DEBUG [f56bee28] Command: [ -L ~/domains/cccjferrer.com/releases/20210628085403/public/upload ]
+ DEBUG [f56bee28] Finished in 0.876 seconds with exit status 1 (failed).
+ DEBUG [84ca6b50] Running [ -d ~/domains/cccjferrer.com/releases/20210628085403/public/upload ] as cccjferrer@da05.qabana.nl
+ DEBUG [84ca6b50] Command: [ -d ~/domains/cccjferrer.com/releases/20210628085403/public/upload ]
+ DEBUG [84ca6b50] Finished in 0.868 seconds with exit status 1 (failed).
+  INFO [7eb5cf51] Running /usr/bin/env ln -s ~/domains/cccjferrer.com/shared/public/upload ~/domains/cccjferrer.com/releases/20210628085403/public/upload as cccjferrer@da05.qabana.nl
+ DEBUG [7eb5cf51] Command: /usr/bin/env ln -s ~/domains/cccjferrer.com/shared/public/upload ~/domains/cccjferrer.com/releases/20210628085403/public/upload
+  INFO [7eb5cf51] Finished in 0.872 seconds with exit status 0 (successful).
+ DEBUG [a7678320] Running if test ! -d ~/domains/cccjferrer.com/releases/20210628085403; then echo "Directory does not exist '~/domains/cccjferrer.com/releases/20210628085403'" 1>&2; false; fi as cccjferrer@da05.qabana.nl
+ DEBUG [a7678320] Command: if test ! -d ~/domains/cccjferrer.com/releases/20210628085403; then echo "Directory does not exist '~/domains/cccjferrer.com/releases/20210628085403'" 1>&2; false; fi
+ DEBUG [a7678320] Finished in 0.864 seconds with exit status 0 (successful).
+  INFO [6a1f9a7f] Running composer install --no-dev --no-interaction --optimize-autoloader --ignore-platform-reqs as cccjferrer@da05.qabana.nl
+ DEBUG [6a1f9a7f] Command: cd ~/domains/cccjferrer.com/releases/20210628085403 && composer install --no-dev --no-interaction --optimize-autoloader --ignore-platform-reqs
+ DEBUG [6a1f9a7f] 	Installing dependencies from lock file
+ DEBUG [6a1f9a7f] 	Verifying lock file contents can be installed on current platform.
+ DEBUG [6a1f9a7f] 	Package operations: 92 installs, 0 updates, 0 removals
+ DEBUG [6a1f9a7f] 	    0 [>---------------------------]    0 [>---------------------------]
+ DEBUG [6a1f9a7f] 	  - Installing composer/package-versions-deprecated (1.11.99.1): Extracting archive
+ DEBUG [6a1f9a7f] 	  - Installing symfony/flex (v1.12.2): Extracting archive
+ DEBUG [6a1f9a7f] 	  - Installing doctrine/deprecations (v0.5.3): Extracting archive
+ DEBUG [6a1f9a7f] 	  - Installing symfony/routing (v4.4.20): Extracting archive
+ DEBUG [6a1f9a7f] 	  - Installing symfony/polyfill-mbstring (v1.22.1): Extracting archive
+ DEBUG [6a1f9a7f] 	  - Installing symfony/polyfill-php80 (v1.22.1): Extracting archive
+ DEBUG [6a1f9a7f] 	  - Installing symfony/polyfill-php73 (v1.22.1): Extracting archive
+ DEBUG [6a1f9a7f] 	  - Installing symfony/polyfill-php72 (v1.22.1): Extracting archive
+ DEBUG [6a1f9a7f] 	  - Installing symfony/polyfill-intl-normalizer (v1.22.1): Extracting archive
+ DEBUG [6a1f9a7f] 	  - Installing symfony/polyfill-intl-idn (v1.22.1): Extracting archive
+ DEBUG [6a1f9a7f] 	  - Installing symfony/mime (v4.4.21): Extracting archive
+ DEBUG [6a1f9a7f] 	  - Installing symfony/http-foundation (v4.4.20): Extracting archive
+ DEBUG [6a1f9a7f] 	  - Installing symfony/http-client-contracts (v2.3.1): Extracting archive
+ DEBUG [6a1f9a7f] 	  - Installing symfony/event-dispatcher-contracts (v1.1.9): Extracting archive
+ DEBUG [6a1f9a7f] 	  - Installing symfony/event-dispatcher (v4.4.20): Extracting archive
+ DEBUG [6a1f9a7f] 	  - Installing symfony/var-dumper (v4.4.21): Extracting archive
+ DEBUG [6a1f9a7f] 	  - Installing psr/log (1.1.3): Extracting archive
+ DEBUG [6a1f9a7f] 	  - Installing symfony/debug (v4.4.20): Extracting archive
+ DEBUG [6a1f9a7f] 	  - Installing symfony/error-handler (v4.4.21): Extracting archive
+ DEBUG [6a1f9a7f] 	  - Installing symfony/http-kernel (v4.4.21): Extracting archive
+ DEBUG [6a1f9a7f] 	  - Installing symfony/finder (v4.4.20): Extracting archive
+ DEBUG [6a1f9a7f] 	  - Installing symfony/filesystem (v4.4.21): Extracting archive
+ DEBUG [6a1f9a7f] 	  - Installing psr/container (1.1.1): Extracting archive
+ DEBUG [6a1f9a7f] 	  - Installing symfony/service-contracts (v2.2.0): Extracting archive
+ DEBUG [6a1f9a7f] 	  - Installing symfony/dependency-injection (v4.4.21): Extracting archive
+ DEBUG [6a1f9a7f] 	  - Installing symfony/config (v4.4.20): Extracting archive
+ DEBUG [6a1f9a7f] 	  - Installing symfony/var-exporter (v4.4.20): Extracting archive
+ DEBUG [6a1f9a7f] 	  - Installing psr/cache (1.0.1): Extracting archive
+ DEBUG [6a1f9a7f] 	  - Installing symfony/cache-contracts (v2.2.0): Extracting archive
+ DEBUG [6a1f9a7f] 	  - Installing symfony/cache (v4.4.21): Extracting archive
+ DEBUG [6a1f9a7f] 	  - Installing symfony/framework-bundle (v4.4.21): Extracting archive
+ DEBUG [6a1f9a7f] 	  - Installing symfony/stopwatch (v4.4.20): Extracting archive
+ DEBUG [6a1f9a7f] 	  - Installing symfony/console (v4.4.21): Extracting archive
+ DEBUG [6a1f9a7f] 	  - Installing laminas/laminas-zendframework-bridge (1.1.1): Extracting archive
+ DEBUG [6a1f9a7f] 	  - Installing laminas/laminas-eventmanager (3.2.1): Extracting archive
+ DEBUG [6a1f9a7f] 	  - Installing laminas/laminas-code (3.4.1): Extracting archive
+ DEBUG [6a1f9a7f] 	  - Installing friendsofphp/proxy-manager-lts (v1.0.3): Extracting archive
+ DEBUG [6a1f9a7f] 	  - Installing doctrine/event-manager (1.1.1): Extracting archive
+ DEBUG [6a1f9a7f] 	  - Installing doctrine/cache (1.10.2): Extracting archive
+ DEBUG [6a1f9a7f] 	  - Installing doctrine/dbal (2.13.0): Extracting archive
+ DEBUG [6a1f9a7f] 	  - Installing doctrine/migrations (3.1.1): Extracting archive
+ DEBUG [6a1f9a7f] 	  - Installing doctrine/collections (1.6.7): Extracting archive
+ DEBUG [6a1f9a7f] 	  - Installing doctrine/lexer (1.2.1): Extracting archive
+ DEBUG [6a1f9a7f] 	  - Installing doctrine/annotations (1.12.1): Extracting archive
+ DEBUG [6a1f9a7f] 	  - Installing doctrine/persistence (2.1.0): Extracting archive
+ DEBUG [6a1f9a7f] 	  - Installing symfony/doctrine-bridge (v4.4.21): Extracting archive
+ DEBUG [6a1f9a7f] 	  - Installing doctrine/sql-formatter (1.1.1): Extracting archive
+ DEBUG [6a1f9a7f] 	  - Installing doctrine/doctrine-bundle (2.3.1): Extracting archive
+ DEBUG [6a1f9a7f] 	  - Installing doctrine/doctrine-migrations-bundle (3.1.0): Extracting archive
+ DEBUG [6a1f9a7f] 	  - Installing doctrine/instantiator (1.4.0): Extracting archive
+ DEBUG [6a1f9a7f] 	  - Installing doctrine/inflector (2.0.3): Extracting archive
+ DEBUG [6a1f9a7f] 	  - Installing doctrine/common (3.1.2): Extracting archive
+ DEBUG [6a1f9a7f] 	  - Installing doctrine/orm (2.8.4): Extracting archive
+ DEBUG [6a1f9a7f] 	  - Installing webmozart/assert (1.10.0): Extracting archive
+ DEBUG [6a1f9a7f] 	  - Installing phpdocumentor/reflection-common (2.2.0): Extracting archive
+ DEBUG [6a1f9a7f] 	  - Installing phpdocumentor/type-resolver (1.4.0): Extracting archive
+ DEBUG [6a1f9a7f] 	  - Installing phpdocumentor/reflection-docblock (5.2.2): Extracting archive
+ DEBUG [6a1f9a7f] 	  - Installing sensio/framework-extra-bundle (v5.6.1): Extracting archive
+ DEBUG [6a1f9a7f] 	  - Installing symfony/asset (v4.4.20): Extracting archive
+ DEBUG [6a1f9a7f] 	  - Installing symfony/dotenv (v4.4.20): Extracting archive
+ DEBUG [6a1f9a7f] 	  - Installing symfony/expression-language (v4.4.20): Extracting archive
+ DEBUG [6a1f9a7f] 	  - Installing symfony/inflector (v4.4.21): Extracting archive
+ DEBUG [6a1f9a7f] 	  - Installing symfony/property-access (v4.4.20): Extracting archive
+ DEBUG [6a1f9a7f] 	  - Installing symfony/options-resolver (v4.4.20): Extracting archive
+ DEBUG [6a1f9a7f] 	  - Installing symfony/polyfill-intl-icu (v1.22.1): Extracting archive
+ DEBUG [6a1f9a7f] 	  - Installing symfony/intl (v4.4.20): Extracting archive
+ DEBUG [6a1f9a7f] 	  - Installing symfony/form (v4.4.21): Extracting archive
+ DEBUG [6a1f9a7f] 	  - Installing symfony/http-client (v4.4.21): Extracting archive
+ DEBUG [6a1f9a7f] 	  - Installing egulias/email-validator (3.1.1): Extracting archive
+ DEBUG [6a1f9a7f] 	  - Installing symfony/mailer (v4.4.21): Extracting archive
+ DEBUG [6a1f9a7f] 	  - Installing monolog/monolog (1.26.0): Extracting archive
+ DEBUG [6a1f9a7f] 	  - Installing symfony/monolog-bridge (v4.4.21): Extracting archive
+ DEBUG [6a1f9a7f] 	  - Installing symfony/monolog-bundle (v3.7.0): Extracting archive
+ DEBUG [6a1f9a7f] 	  - Installing symfony/process (v4.4.20): Extracting archive
+ DEBUG [6a1f9a7f] 	  - Installing symfony/property-info (v4.4.20): Extracting archive
+ DEBUG [6a1f9a7f] 	  - Installing symfony/proxy-manager-bridge (v4.4.20): Extracting archive
+ DEBUG [6a1f9a7f] 	  - Installing symfony/security-core (v4.4.21): Extracting archive
+ DEBUG [6a1f9a7f] 	  - Installing symfony/security-http (v4.4.21): Extracting archive
+ DEBUG [6a1f9a7f] 	  - Installing symfony/security-guard (v4.4.20): Extracting archive
+ DEBUG [6a1f9a7f] 	  - Installing symfony/security-csrf (v4.4.20): Extracting archive
+ DEBUG [6a1f9a7f] 	  - Installing symfony/security-bundle (v4.4.21): Extracting archive
+ DEBUG [6a1f9a7f] 	  - Installing symfony/serializer (v4.4.20): Extracting archive
+ DEBUG [6a1f9a7f] 	  - Installing symfony/translation-contracts (v2.3.0): Extracting archive
+ DEBUG [6a1f9a7f] 	  - Installing symfony/translation (v4.4.21): Extracting archive
+ DEBUG [6a1f9a7f] 	  - Installing twig/twig (v3.3.0): Extracting archive
+ DEBUG [6a1f9a7f] 	  - Installing symfony/twig-bridge (v4.4.21): Extracting archive
+ DEBUG [6a1f9a7f] 	  - Installing symfony/validator (v4.4.21): Extracting archive
+ DEBUG [6a1f9a7f] 	  - Installing psr/link (1.0.0): Extracting archive
+ DEBUG [6a1f9a7f] 	  - Installing symfony/web-link (v4.4.21): Extracting archive
+ DEBUG [6a1f9a7f] 	  - Installing symfony/yaml (v4.4.21): Extracting archive
+ DEBUG [6a1f9a7f] 	  - Installing symfony/twig-bundle (v4.4.20): Extracting archive
+ DEBUG [6a1f9a7f] 	  - Installing twig/extra-bundle (v3.3.0): Extracting archive
+ DEBUG [6a1f9a7f] 	  0/90 [>---------------------------]   0%
+ DEBUG [6a1f9a7f] 	
+ 10/90 [===>------------------------]  11%
+ DEBUG [6a1f9a7f] 	
+ 18/90 [=====>----------------------]  20%
+ DEBUG [6a1f9a7f] 	
+ 26/90 [========>-------------------]  28%
+ DEBUG [6a1f9a7f] 	
+ 35/90 [==========>-----------------]  38%
+ DEBUG [6a1f9a7f] 	
+ 42/90 [=============>--------------]  46%
+ DEBUG [6a1f9a7f] 	
+ 51/90 [===============>------------]  56%
+ DEBUG [6a1f9a7f] 	
+ 61/90 [==================>---------]  67%
+ DEBUG [6a1f9a7f] 	
+ 72/90 [======================>-----]  80%
+ DEBUG [6a1f9a7f] 	
+ 76/90 [=======================>----]  84%
+ DEBUG [6a1f9a7f] 	
+ 81/90 [=========================>--]  90%
+ DEBUG [6a1f9a7f] 	
+ 87/90 [===========================>]  96%
+ DEBUG [6a1f9a7f] 	
+ 90/90 [============================] 100%
+ DEBUG [6a1f9a7f] 	Generating optimized autoload files
+ DEBUG [6a1f9a7f] 	composer/package-versions-deprecated: Generating version class...
+ DEBUG [6a1f9a7f] 	composer/package-versions-deprecated: ...done generating version class
+ DEBUG [6a1f9a7f] 	
+ DEBUG [6a1f9a7f] 	Run composer recipes at any time to see the status of your Symfony recipes.
+
+ DEBUG [6a1f9a7f] 	Executing script cache:clear
+ DEBUG [6a1f9a7f] 	 [KO]
+ [KO]
+Script cache:clear returned with error code 1
+ DEBUG [6a1f9a7f] 	!!  
+!!  In FileLoader.php line 180:
+!!                                                                                 
+ DEBUG [6a1f9a7f] 	!!    Expected to find class "App\Twig\SortByFieldExtension" in file "/home/cccjf  
+!!    errer/domains/cccjferrer.com/releases/20210628085403/src/Twig/SortByFieldEx  
+!!    tension.php" while importing services from resource "../src/", but it was n  
+!!    ot found! Check the namespace prefix used with the resource in /home/cccjfe  
+!!    rrer/domains/cccjferrer.com/releases/20210628085403/config/services.yaml (w  
+!!    hich is loaded in resource "/home/cccjferrer/domains/cccjferrer.com/release  
+!!    s/20210628085403/config/services.yaml").                                     
+!!                                                                                 
+!!  
+!!  In FileLoader.php line 208:
+!!                                                                                 
+!!    Expected to find class "App\Twig\SortByFieldExtension" in file "/home/cccjf  
+!!    errer/domains/cccjferrer.com/releases/20210628085403/src/Twig/SortByFieldEx  
+!!    tension.php" while importing services from resource "../src/", but it was n  
+!!    ot found! Check the namespace prefix used with the resource.                 
+!!                                                                                 
+!!  
+!!  
+ DEBUG [6a1f9a7f] 	Script @auto-scripts was called via post-install-cmd

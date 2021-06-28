@@ -1,6 +1,6 @@
 <?php
 
-namespace Snilius\Twig;
+namespace App\Twig;
 
 use Exception;
 use Twig\TwigFilter;
