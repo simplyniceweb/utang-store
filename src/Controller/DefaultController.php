@@ -32,6 +32,11 @@ class DefaultController extends AbstractController
 
     public function index(Request $request)
     {
+        $admin = $request->get('admin');
+        if (!isset($admin)) {
+            return false;
+        }
+
         $return = [];
 
         // 5 recent debts
